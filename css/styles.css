@@ -89,7 +89,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 27ch;
-  animation: typewriter 5s steps(27) 1s , cursor 500ms steps(27) infinite;
+  animation: typewriter 5s steps(27) 1s , cursor 500ms steps(19) infinite;
 }
 
 
