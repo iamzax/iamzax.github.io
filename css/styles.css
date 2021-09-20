@@ -102,8 +102,8 @@ body {
 color: rgb(24, 24, 24);
   font-family: consolas;
   font-weight:bold;
-  font-size: 60px;
-  animation: crow 0.5s linear 0s infinite;
+  font-size: 70px;
+  animation: crow 0.2s linear 2s infinite;
 }
 
 @keyframes typing {
