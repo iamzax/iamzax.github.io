@@ -82,16 +82,28 @@ body {
 
 #typing {
 
-  width: 0ch;
-  color: rgb(32, 32, 32);
-  float: left;
-  font-family: sans-serif;
-  font-weight:bold;
-  font-size: 60px;
-  overflow: hidden;
+  
+
+  font-size: 3.5rem;
+  border-right: solid 2px rgba(32, 31, 31, 0.7);
   white-space: nowrap;
-  animation: typing 5s steps(22);
-  animation-fill-mode: forwards;
+  overflow: hidden;
+  width: 27ch;
+  animation: typewriter 5s steps(27) 1s , cursor 500ms steps(27) infinite;
+}
+
+
+
+/* typewriter animation */
+@keyframes typewriter {
+  0%{width: 0;}
+  100%{width: 27ch;}
+}
+/* cursor animation */
+@keyframes cursor {
+  
+  0%{border-right-color:goldenrod;}
+  100%{border-right-color: transparent;}
 }
 
 
