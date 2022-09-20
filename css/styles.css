@@ -88,16 +88,14 @@ body {
   border-right: solid 2px rgba(32, 31, 31, 0.7);
   white-space: nowrap;
   overflow: hidden;
-  width: 27ch;
-  animation: typewriter 5s steps(27) 1s , cursor 500ms steps(19) infinite;
+  width: auto;
+  animation: typewriter 5s steps(27) 1s , cursor 500ms steps(17) infinite;
 }
-
-
 
 /* typewriter animation */
 @keyframes typewriter {
-  0%{width: 0;}
-  100%{width: 27ch;}
+  0%{width: 0ch;}
+  100%{width: 25ch;}
 }
 /* cursor animation */
 @keyframes cursor {
@@ -107,34 +105,14 @@ body {
 }
 
 
-
-#crow {
-  float: left;
-
-color: rgb(24, 24, 24);
-  font-family: consolas;
-  font-weight:bold;
-  font-size: 70px;
-  animation: crow 0.2s linear 2s infinite;
-}
-
 @keyframes typing {
   from {
       width: 0ch;
   }
   to {
-      width: 32ch;
+      width:auto;
   }
 }
-@keyframes crow {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
 
 hr {
   margin: 1rem 0;
