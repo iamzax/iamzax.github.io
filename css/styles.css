@@ -81,36 +81,30 @@ body {
 
 
 #typing {
-
-  
-
-  font-size: 3.5rem;
-  border-right: solid 2px rgba(32, 31, 31, 0.7);
-  white-space: nowrap;
-  overflow: hidden;
-  width: auto;
-  animation: typewriter 5s steps(27) 1s , cursor 500ms steps(17) infinite;
+  overflow: hidden; /* Ensures text is not shown outside the containing element */
+  border-right: .10em solid orange; /* Typing cursor */
+  white-space: nowrap; /* Keeps the text in a single line */
+  margin: 0 auto; /* Center the text horizontally */
+  letter-spacing: .15em; /* Adjust letter spacing for better readability */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; /* Typewriter animation */
 }
 
-/* typewriter animation */
-@keyframes typewriter {
-  0%{width: 0ch;}
-  100%{width: 25ch;}
-}
-/* cursor animation */
-@keyframes cursor {
-  
-  0%{border-right-color:goldenrod;}
-  100%{border-right-color: transparent;}
-}
-
-
+/* Typewriter animation */
 @keyframes typing {
-  from {
-      width: 0ch;
-  }
-  to {
-      width:auto;
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  #typing {
+      font-size: 18px; /* Adjust font size for smaller screens */
   }
 }
 
