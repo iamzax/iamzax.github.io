@@ -152,8 +152,19 @@
                                     <p class="mb-0">A concise overview showcasing my skills and experiences.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/resumee.png"/>
+                            <img class="img-fluid" src="assets/img/portfolio-4.jpg"/>
                             
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="https://github.com/CS3100W24/project-iamzax">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">StoX Game</div>
+                                    <p class="mb-0">A trading game designed in html, js and css, and powered by poygon API that allows players to compete with their trade portfolios.</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/stox_logo.jpg" alt="..." />
                         </a>
                     </div>
                 </div>
@@ -179,5 +190,46 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            function typeWriter(element, text, i, fnCallback) {
+                if (i < (text.length)) {
+                    // Ensure old cursors are removed
+                    element.innerHTML = text.substring(0, i+1);
+                    
+                    // Add a single cursor span
+                    element.innerHTML += '<span aria-hidden="true" class="cursor"></span>';
+            
+                    // Wait before adding next character
+                    setTimeout(function() {
+                        typeWriter(element, text, i + 1, fnCallback);
+                    }, 100);
+                } else if (typeof fnCallback == 'function') {
+                    // Call callback after the whole text is displayed
+                    setTimeout(fnCallback, 700);
+                }
+            }
+            
+            function StartTextAnimation(i) {
+                if (typeof dataText[i] == 'undefined'){
+                    setTimeout(function() {
+                        StartTextAnimation(0);
+                    }, 20000);
+                }
+                // Check if dataText[i] exists
+                if (i < dataText.length) {
+                    // Text you want to write
+                    var text = dataText[i];
+                    typeWriter(document.querySelector("#typing"), text, 0, function(){
+                        StartTextAnimation(i + 1);
+                    });
+                }
+            }
+            
+            document.addEventListener('DOMContentLoaded', function(event) {
+                // Array of strings to display
+                dataText = [ "hi, Zack here ^_^" ];
+                StartTextAnimation(0);
+            });
+            </script>            
     </body>
 </html>

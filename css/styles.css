@@ -78,36 +78,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
-
-#typing {
-  overflow: hidden; /* Ensures text is not shown outside the containing element */
-  border-right: .10em solid orange; /* Typing cursor */
-  white-space: nowrap; /* Keeps the text in a single line */
-  margin: 0 auto; /* Center the text horizontally */
-  letter-spacing: .15em; /* Adjust letter spacing for better readability */
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; /* Typewriter animation */
-}
-
-/* Typewriter animation */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* Blinking cursor animation */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-
-/* Make it responsive */
-@media (max-width: 768px) {
-  #typing {
-      font-size: 18px; /* Adjust font size for smaller screens */
-  }
-}
-
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -11597,4 +11567,14 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cursor {
+  border-right: 0.1em solid goldenrod;  /* Adjust color to gold */
+  animation: blinkCursor 0.7s steps(40) infinite;
+}
+
+@keyframes blinkCursor {
+  from { border-right-color: goldenrod; }
+  to { border-right-color: transparent; }
 }
