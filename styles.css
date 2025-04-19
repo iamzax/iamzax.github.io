@@ -1,0 +1,386 @@
+/* Particles Background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
+
+/* Website Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+}
+
+.masthead {
+  padding: 150px 0 100px;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.lead {
+  color: #cccccc;
+}
+
+.about-text {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #dddddd;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background: radial-gradient(circle at 30% 30%, #555555, #111111 80%);
+  color: #e0e0e0;
+  padding: 20px 26px;
+  margin: 15px;
+  font-weight: 600;
+  font-size: 20px; /* <<< Make font size 20px */
+  transition: transform 0.6s ease;
+  box-shadow:
+    inset -4px -4px 10px rgba(255,255,255,0.08),
+    inset 4px 4px 10px rgba(0,0,0,0.7),
+    0 8px 18px rgba(0, 0, 0, 0.9);
+  animation: asteroidFloat 7s ease-in-out infinite alternate;
+  border-radius: 30% 50% 40% 60% / 50% 30% 60% 40%; /* if you still want asteroid shapes */
+}
+
+.badge:hover {
+  transform: scale(1.1) rotate(6deg);
+}
+
+
+@keyframes asteroidFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(-2deg); }
+}
+
+
+.card {
+  border: none;
+  background-color: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+footer {
+  background-color: rgba(30, 30, 30, 0.95);
+  padding: 40px 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spacing between the buttons */
+  flex-wrap: wrap; /* mobile-friendly */
+  margin-top: 30px;
+}
+
+/* Say Hello button */
+.btn-sayhello {
+  display: inline-block;
+  background: linear-gradient(135deg, #1a2c80, #4a478a, #da8a8b);
+  color: #ffffff;
+  padding: 15px 35px;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-sayhello:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(90, 90, 255, 0.4);
+}
+
+/* Resume button */
+.btn-resume {
+  display: inline-block;
+  background: transparent;
+  padding: 15px 35px;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  border: 3px solid transparent; /* <<< Needed for gradient border */
+  background-image: linear-gradient(#000, #000), linear-gradient(135deg, #1a2c80, #4a478a, #da8a8b);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #90caf9;
+}
+
+.btn-resume:hover {
+  background: linear-gradient(135deg,#da8a8b);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* My Experience Section */
+#experience {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #1a2c80,
+    #4a478a,
+    #da8a8b
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-card {
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 1400px;
+  width: 95%;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.experience-title {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    #da8a8b,
+    #cccccc
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #cccccc; /* Backup solid color */
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 8px rgba(200, 116, 178, 0.5); /* soft glow */
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: none;
+}
+
+.experience-dates {
+  font-size: 18px;
+  font-weight: 400;
+  color: #cccccc;
+  text-align: right;
+  margin: 0;
+}
+
+.experience-location {
+  font-size: 16px;
+  font-weight: 400;
+  color: #bbbbbb;
+  margin-bottom: 15px;
+}
+.experience-card p {
+  font-size: 20px;
+  color: #bbbbbb;
+}
+
+* Portfolio Section */
+#portfolio {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 300px;
+  width: 90%;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Remove underline because it's an <a> */
+  color: inherit; /* Keep your normal text color */
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 0px 30px rgba(144, 202, 249, 0.2);
+}
+
+.portfolio-card {
+  cursor: pointer;
+}
+
+.portfolio-card h3 {
+  font-size: 22px;
+  margin-top: 15px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #da8a8b, #cccccc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio-card p {
+  font-size: 14px;
+  color: #bbbbbb;
+  margin: 10px 0 20px;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Header Section Better Layout */
+.masthead {
+  padding: 180px 0 100px;
+  position: relative;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subheading {
+  font-size: 24px;
+  font-weight: 400;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+
+/* Fade In Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Keyframes for Fade In */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    #1a2c80,
+    #4a478a,
+    #da8a8b,
+    #cccccc
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #cccccc; /* Backup solid color */
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 8px rgba(200, 116, 178, 0.5); /* soft glow */
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: none;
+}
+
+
+#shooting-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Same as particles-js */
+  pointer-events: none;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent; /* <<< MAKE BACKGROUND TRANSPARENT */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: none; /* <<< REMOVE SHADOW */
+  transition: transform 0.3s ease;
+  width: 120px;
+}
+
+.skill i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #90caf9;
+}
+
+.skill img { /* in case you're using a logo image */
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  margin: 0;
+  font-weight: 600;
+  color: #e0e0e0;
+}
